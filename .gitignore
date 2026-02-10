@@ -1,0 +1,4 @@
+build/
+minhook/
+*.dll
+*.o
