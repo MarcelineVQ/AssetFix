@@ -19,11 +19,22 @@ stores normalized paths in a hash table (djb2, open addressing,
 case-insensitive). This makes the hooked disk check O(1) instead of hitting the
 filesystem for every query and thus essentially as costless as MPQ files are.
 
-## Build
+## Usage
 
-Requires MinGW-w64 (i686 target):
+Load `assetfix.dll` into the game process via your preferred method (launcher, injector, etc).
+Most easily by adding `assetfix.dll` to your `dlls.txt` file.
 
-```
+## Building
+
+Requires MinGW-w64 cross-compiler (i686 target for 32-bit).
+
+```bash
+git clone --recursive https://github.com/MarcelineVQ/AssetFix
+cd assetfix
+
 make            # debug build
 make release    # stripped release build
+make clean      # clean artifacts
 ```
+
+The Makefile automatically fetches the MinHook submodule if needed.
