@@ -1,0 +1,7 @@
+build/
+minhook/
+*.dll
+*.o
+.zig-cache/
+zig-out/
+audit.log
